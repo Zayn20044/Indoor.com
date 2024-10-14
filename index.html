@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Website</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet"> <!-- Corrected placement -->
+    <style>
+        body {
+            font-family: 'Press Start 2P', cursive; /* Custom gaming font */
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar {
+            background-color: #333;
+            overflow: hidden;
+            border-bottom: 2px solid #ddd; /* Adding a border at the bottom */
+        }
+
+        .navbar a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            border-right: 1px solid #ddd; /* Adding a border between links */
+            transition: background-color 0.3s, color 0.3s; /* Adding transition effect */
+        }
+
+        .navbar a:hover {
+            background-color: lightcoral;
+            color: black;
+        }
+
+        .search-container {
+            float: right;
+            padding: 14px 16px;
+            display: flex;
+        }
+
+        .search-box {
+            padding: 8px;
+            border: none;
+            border-radius: 3px;
+            transition: background-color 0.3s; /* Adding transition effect for background color */
+        }
+
+        .search-box:hover {
+            background-color: lightblue; /* Change background color on hover */
+        }
+
+        .hero-section {
+            background: url('background10.jpg') no-repeat center center/cover;
+            color: #1a1818; /* Ensure text is visible on dark backgrounds */
+            text-align: center;
+            padding: 40px 20px; /* Spacing for readability */
+        }
+
+        .hero-section h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .hero-section p {
+            font-size: 18px;
+        }
+
+        .game-trailer {
+            float: right; /* Shift the video to the right */
+            width: 600px; /* Make the video smaller */
+            margin: 30px; /* Add margin for spacing */
+        }
+
+        .game-trailer iframe {
+            width: 100%;
+            height: 500%;
+        }
+
+        footer {
+            background-color: lightgreen;
+            color: #333;
+            text-align: center;
+            padding: 10px 0;
+            clear: both; /* Ensure footer is below floated elements */
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Hero Section -->
+    <div class="hero-section">
+        <h1>Welcome to the <url>Indoor</url> Ultimate Gaming Experience!</h1>
+        <p>Explore the Worst games, tips, and guides</p>
+    </div>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#tips">Services</a>
+        <a href="#contact">Contact</a>
+
+        <div class="search-container">
+            <input type="text" placeholder="Search..." class="search-box">
+            <button type="submit">Search</button>
+        </div>
+    </div>
+
+    <!-- Game Trailer (Shifted to the right and resized) -->
+    <div class="game-trailer">
+        <iframe src="https://www.youtube.com/embed/game-trailer-id" frameborder="01" allowfullscreen></iframe>
+    </div>
+    <div class="game-container">
+        <h2>Game 1</h2>
+        <iframe src="bird.html" width="700" height="500"></iframe>
+            <h2>Game 2</h2>
+            <iframe src="ball.html" width="800" height="600"></iframe>
+    <!-- Footer -->
+    <footer>
+        &copy; 2024 Your Website Name. All rights reserved.
+    </footer>
+
+</body>
+</html>
