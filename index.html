@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Website</title>
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet"> <!-- Corrected placement -->
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Press Start 2P', cursive; /* Custom gaming font */
             margin: 0;
             padding: 0;
+            cursor: url('cursor.png'), auto; /* Custom cursor */
         }
 
         .navbar {
@@ -27,6 +28,7 @@
             text-decoration: none;
             border-right: 1px solid #ddd; /* Adding a border between links */
             transition: background-color 0.3s, color 0.3s; /* Adding transition effect */
+            cursor: url('hover-cursor.png'), pointer; /* Custom cursor for links */
         }
 
         .navbar a:hover {
@@ -78,6 +80,76 @@
             height: 500%;
         }
 
+        /* Flip Card Styles */
+        .game-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+        }
+
+        .game-card {
+            perspective: 1000px;
+            width: 250px;
+            height: 300px;
+            margin: 20px;
+        }
+
+        .game-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transition: transform 1s;
+            transform-style: preserve-3d;
+        }
+
+        .game-card:hover .game-card-inner {
+            transform: rotateY(180deg);
+        }
+
+        .game-card-front, .game-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 10px; /* Add padding for better spacing */
+            box-sizing: border-box;
+        }
+
+        .game-card-front {
+            background-color: #f1f1f1aa;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid #6c6868aa;
+        }
+
+        .game-card-back {
+            background-color: #333;
+            color: white;
+            transform: rotateY(180deg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            border: 2px solid #6c6868aa;
+        }
+        .game-card-back h2, .game-card-back p {
+           margin: 5px 0; /* Ensure small margins between elements */
+}
+
+        .game-card a {
+           margin-top: 10px;
+           color: yellow;
+           text-decoration: none;
+           font-size: 14px; /* Adjust font size for links */
+}
+
         footer {
             background-color: lightgreen;
             color: #333;
@@ -111,16 +183,43 @@
 
     <!-- Game Trailer (Shifted to the right and resized) -->
     <div class="game-trailer">
-        <iframe src="https://www.youtube.com/embed/game-trailer-id" frameborder="01" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/game-trailer-id" frameborder="01" width="400" height="500" allowfullscreen></iframe>
     </div>
+
+    <!-- Game Preview Cards -->
     <div class="game-container">
-        <h2>Game 1</h2>
-        <iframe src="bird.html" width="800" height="600"></iframe>
-            <h2>Game 2</h2>
-            <iframe src="ball.html" width="850" height="650"></iframe>
+        <!-- Game 1 Card -->
+        <div class="game-card">
+            <div class="game-card-inner">
+                <div class="game-card-front">
+                    <img src="911.jpg" width="250" height="300" alt="Game 1">
+                </div>
+                <div class="game-card-back">
+                    <h2>9/11</h2>
+                    <p>try to be in middle!</p>
+                    <a href="bird.html" style="color: rgb(35, 234, 0);">Play </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Game 2 Card -->
+        <div class="game-card">
+            <div class="game-card-inner">
+                <div class="game-card-front">
+                    <img src="bricks.jpg" width="250" height="300" alt="Game 2">
+                </div>
+                <div class="game-card-back">
+                    <h2>Ball & Bricks</h2>
+                    <p>Break the walls!</p>
+                    <a href="ball.html" style="color: rgb(35, 234, 0);">Play </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Footer -->
     <footer>
-        &copy; 2024 Your Website Name. All rights reserved.
+        &copy; 2024 /Indoor.net All rights reserved.
     </footer>
 
 </body>
