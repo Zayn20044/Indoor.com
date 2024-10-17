@@ -118,6 +118,11 @@ function keyDownHandler(e) {
     gameState = 'playing';  // Start the game when "Enter" is pressed
   } else if (e.key === 'Enter' && gameState === 'gameover') {
     restartGame();  // Restart game on Enter after game over
+  } else if (e.key === ' ' && gameState === 'playing') {  // Change to Spacebar
+    gameState = 'paused';  // Pause the game
+  } else if (e.key === ' ' && gameState === 'paused') {  // Change to Spacebar
+    gameState = 'playing';  // Resume the game
+    update();  // Restart the game loop
   }
 }
 
@@ -247,4 +252,4 @@ function startGame() {
   }
 }
 
-startGame(); // Initiate the start screen
+startGame();
