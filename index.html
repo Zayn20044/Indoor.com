@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Website</title>
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href="https://fonts.google.com/share?selection.family=Golos+Text:wght@400..900" rel="stylesheet">
     <style>
         body {
             font-family: 'Press Start 2P', cursive; /* Custom gaming font */
@@ -27,13 +27,14 @@
             padding: 14px 16px;
             text-decoration: none;
             border-right: 1px solid #ddd; /* Adding a border between links */
-            transition: background-color 0.3s, color 0.3s; /* Adding transition effect */
+            transition: background-color 0.3s, color 0.3s, transform 0.3s; /* Adding scale effect */
             cursor: url('hover-cursor.png'), pointer; /* Custom cursor for links */
         }
 
         .navbar a:hover {
             background-color: lightcoral;
             color: black;
+            transform: scale(1.2); /* Slightly enlarge on hover */
         }
 
         .search-container {
@@ -57,7 +58,7 @@
             background: url('background10.jpg') no-repeat center center/cover;
             color: #1a1818; /* Ensure text is visible on dark backgrounds */
             text-align: center;
-            padding: 40px 20px; /* Spacing for readability */
+            padding: 30px 20px; /* Spacing for readability */
         }
 
         .hero-section h1 {
@@ -93,6 +94,12 @@
             width: 250px;
             height: 300px;
             margin: 20px;
+            transition: transform 0.3s, box-shadow 0.3s; /* Add transition for both transform and shadow */
+        }
+
+        .game-card:hover {
+            transform: scale(1.05); /* Slightly enlarge on hover */
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3); /* Add a subtle shadow effect */
         }
 
         .game-card-inner {
@@ -139,16 +146,88 @@
             text-align: center;
             border: 2px solid #6c6868aa;
         }
+
         .game-card-back h2, .game-card-back p {
-           margin: 5px 0; /* Ensure small margins between elements */
-}
+            margin: 5px 0; /* Ensure small margins between elements */
+        }
 
         .game-card a {
-           margin-top: 10px;
-           color: yellow;
-           text-decoration: none;
-           font-size: 14px; /* Adjust font size for links */
-}
+            margin-top: 10px;
+            color: yellow;
+            text-decoration: none;
+            font-size: 14px; /* Adjust font size for links */
+        }
+
+        /* Article Section Styling */
+        .article-section {
+            padding: 40px 20px;
+            background-color: #f4f4f4; /* Light background for contrast */
+            text-align: center;
+        }
+
+        .article-section h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        /* Article Container */
+        .article-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        /* Article Card */
+        .article-card {
+            background-color: white;
+            border-radius: 8px;
+            width: 30%;
+            margin: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .article-card:hover {
+            transform: translateY(-10px); /* Lift effect on hover */
+        }
+
+        .article-image {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+        }
+
+        /* Article Content */
+        .article-content {
+            padding: 15px;
+        }
+
+        .article-content h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .article-content p {
+            font-size: 16px;
+            color: #555;
+        }
+
+        .read-more {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #4bfc0a;
+            color: black;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .read-more:hover {
+            background-color: #34d600; /* Darker shade on hover */
+        }
 
         footer {
             background-color: lightgreen;
@@ -156,6 +235,13 @@
             text-align: center;
             padding: 10px 0;
             clear: both; /* Ensure footer is below floated elements */
+        }
+
+        /* Responsive Design for Articles */
+        @media (max-width: 768px) {
+            .article-card {
+                width: 100%;
+            }
         }
     </style>
 </head>
@@ -165,7 +251,7 @@
     <!-- Hero Section -->
     <div class="hero-section">
         <h1>Welcome to the <url>Indoor</url> Ultimate Gaming Experience!</h1>
-        <p>Explore the Worst games, tips, and guides</p>
+       <h2 ><p>Explore the Worst games, tips, and guides</p> </h2>
     </div>
 
     <!-- Navbar -->
@@ -215,15 +301,51 @@
                 </div>
             </div>
         </div>
+
+        <!-- Game 3 Card -->
         <div class="game-card">
             <div class="game-card-inner">
                 <div class="game-card-front">
-                    <img src="game3.png" width="250" height="300" alt="Game 2">
+                    <img src="game3.png" width="250" height="300" alt="Game 3">
                 </div>
                 <div class="game-card-back">
-                     <h2>attack on bar!!</h2>
-                    <p>move arrow fast with space</p>
+                    <h2>Attack on Bar!!</h2>
+                    <p>Move arrow fast with space</p>
                     <a href="colorbrist.html" style="color: rgb(35, 234, 0);">Play </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Article Section -->
+    <div class="article-section">
+        <h2>Latest Articles</h2>
+        <div class="article-container">
+            <!-- Article 1 -->
+            <div class="article-card">
+                <img src="gamemeg.jpg" class="article-image" alt="Article 1">
+                <div class="article-content">
+                    <h3>Understanding Game Mechanics</h3>
+                    <p>Learn about the core mechanics that make games fun and engaging.</p>
+                    <a href="article1.html" class="read-more">Read More</a>
+                </div>
+            </div>
+            <!-- Article 2 -->
+            <div class="article-card">
+                <img src="strategy.jpg" class="article-image" alt="Article 2">
+                <div class="article-content">
+                    <h3>Top 10 Strategies for Winning</h3>
+                    <p>Explore essential strategies to improve your gameplay and win more matches.</p>
+                    <a href="article2.html" class="read-more">Read More</a>
+                </div>
+            </div>
+            <!-- Article 3 -->
+            <div class="article-card">
+                <img src="behind.png" class="article-image" alt="Article 3">
+                <div class="article-content">
+                    <h3>Behind the Scenes of Game Development</h3>
+                    <p>Discover what goes into making your favorite games.</p>
+                    <a href="article3.html" class="read-more">Read More</a>
                 </div>
             </div>
         </div>
