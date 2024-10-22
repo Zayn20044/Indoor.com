@@ -11,10 +11,11 @@
             margin: 0;
             padding: 0;
             cursor: url('cursor.png'), auto; /* Custom cursor */
+            background-color: #333;
         }
 
         .navbar {
-            background-color: #4bfc0a;
+            background-color: #7bef51;
             overflow: hidden;
             border-bottom: 2px solid #ddd; /* Adding a border at the bottom */
         }
@@ -32,8 +33,8 @@
         }
 
         .navbar a:hover {
-            background-color: lightcoral;
-            color: black;
+            background-color: rgb(153, 150, 150);
+            color: rgb(219, 35, 35);
             transform: scale(1.2); /* Slightly enlarge on hover */
         }
 
@@ -92,7 +93,7 @@
         .game-card {
             perspective: 1000px;
             width: 250px;
-            height: 300px;
+            height: 250px;
             margin: 20px;
             transition: transform 0.3s, box-shadow 0.3s; /* Add transition for both transform and shadow */
         }
@@ -138,7 +139,7 @@
 
         .game-card-back {
             background-color: #333;
-            color: white;
+            color: rgb(246, 17, 17);
             transform: rotateY(180deg);
             display: flex;
             align-items: center;
@@ -152,7 +153,7 @@
         }
 
         .game-card a {
-            margin-top: 10px;
+            margin-top: 8px;
             color: yellow;
             text-decoration: none;
             font-size: 14px; /* Adjust font size for links */
@@ -160,8 +161,8 @@
 
         /* Article Section Styling */
         .article-section {
-            padding: 40px 20px;
-            background-color: #f4f4f4; /* Light background for contrast */
+            padding: 20px 20px;
+            background-color: #c3bebe; /* Light background for contrast */
             text-align: center;
         }
 
@@ -180,7 +181,7 @@
         /* Article Card */
         .article-card {
             background-color: white;
-            border-radius: 8px;
+            border-radius: 6px;
             width: 30%;
             margin: 20px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -278,7 +279,7 @@
         <div class="game-card">
             <div class="game-card-inner">
                 <div class="game-card-front">
-                    <img src="911.jpg" width="250" height="300" alt="Game 1">
+                    <img src="911.jpg" width="250" height="250" alt="Game 1">
                 </div>
                 <div class="game-card-back">
                     <h2>9/11</h2>
@@ -292,7 +293,7 @@
         <div class="game-card">
             <div class="game-card-inner">
                 <div class="game-card-front">
-                    <img src="bricks.jpg" width="250" height="300" alt="Game 2">
+                    <img src="bricks.jpg" width="250" height="250" alt="Game 2">
                 </div>
                 <div class="game-card-back">
                     <h2>Ball & Bricks</h2>
@@ -306,7 +307,7 @@
         <div class="game-card">
             <div class="game-card-inner">
                 <div class="game-card-front">
-                    <img src="game3.png" width="250" height="300" alt="Game 3">
+                    <img src="game3.png" width="250" height="250" alt="Game 3">
                 </div>
                 <div class="game-card-back">
                     <h2>Attack on Bar!!</h2>
