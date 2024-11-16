@@ -1,0 +1,73 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    background: url("./mario-bg.jpg");
+    background-size: cover;
+    cursor: url("./hammer-cursor.png"), auto; /* Default hammer cursor */
+}
+
+#board {
+    width: 540px;
+    height: 540px;
+    /* background-color: green; */
+
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+
+    background: url("./soil.png");
+    background-size: cover;
+    border: 3px solid white;
+    border-radius: 25px;
+}
+
+#board div {
+    /* board = 540 x 540, divide into 3x3 tiles --> 180 x 180 per div */
+    width: 180px; 
+    height: 180px;
+    background-image: url("./pipe.png");
+    background-size: cover;
+    cursor: url("./hammer-cursor.png"), auto; /* Hammer cursor for board tiles */
+}
+
+#board div img {
+    /* all img tags inside tiles */
+    width: 100px;
+    height: 100px;
+
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+/* Hover Effect: Slight glow and scaling when hovering over tiles 
+#board div:hover {
+    transform: scale(1.1);
+    border: 2px solid yellow;
+    transition: transform 0.2s, border 0.2s;
+    cursor: url("./hammer-cursor.png"), auto; Hammer cursor on hover */
+
+
+/* Active State: Highlight when clicked */
+#board div.active {
+    background: url("./highlighted.png");
+    background-size: cover;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    #board {
+        width: 300px;
+        height: 300px;
+    }
+    #board div {
+        width: 100px;
+        height: 100px;
+    }
+    #board div img {
+        width: 50px;
+        height: 50px;
+    }
+}
