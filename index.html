@@ -32,7 +32,8 @@
             text-decoration: none;
             border-right: 1px solid #ddd; /* Adding a border between links */
             transition: background-color 0.3s, color 0.3s, transform 0.3s; /* Adding scale effect */
-            cursor: url('hover-cursor.png'), pointer; /* Custom cursor for links */
+            cursor: url('cursor.png'), pointer; /* Custom cursor for links */
+            
         }
 
         .navbar a:hover {
@@ -244,10 +245,22 @@
 
         /* Responsive Design for Articles */
         @media (max-width: 768px) {
-            .article-card {
-                width: 100%;
-            }
-        }
+    .game-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .game-card {
+        width: 80%;
+        height: auto;
+    }
+
+    .game-trailer {
+        width: 100%;
+        height: auto;
+    }
+}
+
     </style>
 </head>
 
@@ -267,8 +280,8 @@
         <a href="#contact">Contact</a>
 
         <div class="search-container">
-            <input type="text" placeholder="Search..." class="search-box">
-            <button type="submit">Search</button>
+            <input type="text" id="gameSearch" placeholder="Search..." class="search-box">
+    <button type="submit">Search</button>
         </div>
     </div>
 
@@ -387,6 +400,21 @@
     <footer>
         &copy; 2024 /Indoor.net All rights reserved.
     </footer>
+    <script>
+          document.getElementById("gameSearch").addEventListener("input", function () {
+        const searchQuery = this.value.toLowerCase();
+        const games = document.querySelectorAll(".game-card");
+
+        games.forEach((game) => {
+            const gameName = game.querySelector(".game-card-back h2").textContent.toLowerCase();
+            if (gameName.includes(searchQuery)) {
+                game.style.display = "block";
+            } else {
+                game.style.display = "none";
+            }
+        });
+    });
+    </script>
 
 </body>
 </html>
