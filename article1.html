@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Understanding Game Mechanics</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html {
+    scroll-behavior: smooth;
+}
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f9;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #5e60ce, #7400b8);
+            color: #fff;
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .hero-text h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .hero-text p {
+            font-size: 1.2rem;
+        }
+
+        /* Content */
+        .content {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .mechanic h2 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+
+        .mechanic p {
+            font-size: 1rem;
+            margin-bottom: 20px;
+        }
+          /* SVG Decorations */
+          .svg-decoration {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            opacity: 0.2;
+        }
+
+        .svg-top-left {
+            top: 10px;
+            left: 10px;
+        }
+
+        .svg-bottom-right {
+            bottom: 10px;
+            right: 10px;
+        }
+        .svg-floating {
+            animation: float 5s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        /* Mechanic Cards */
+        .mechanic-card-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .mechanic-card {
+            background: #7400b8;
+            color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .mechanic-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+        .mechanic-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+        }
+
+        .mechanic-card p {
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+        }
+
+        .mechanic-card strong {
+            font-size: 1rem;
+        }
+
+        /* Article Section */
+        .article {
+            margin-top: 40px;
+            padding: 20px;
+            background: #e0e0f8;
+            border-radius: 10px;
+        }
+
+        .article h2 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            color: #5e60ce;
+        }
+
+        .article p {
+            font-size: 1rem;
+            margin-bottom: 15px;
+        }
+
+        .article ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        .article ul li {
+            margin-bottom: 10px;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            margin: 20px 0;
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        footer a {
+            color: #7400b8;
+            text-decoration: none;
+        }
+        
+    </style>
+</head>
+<body>
+    <header class="hero">
+        <div class="hero-text">
+            <h1>Understanding Game Mechanics</h1>
+            <p>Learn about the core mechanics that make games fun and engaging.</p>
+        </div>
+        <svg class="svg-decoration svg-top-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="currentColor">
+            <path d="M32 0C14.3 0 0 14.3 0 32s14.3 32 32 32 32-14.3 32-32S49.7 0 32 0zm0 58C17.7 58 6 46.3 6 32S17.7 6 32 6s26 11.7 26 26-11.7 26-26 26z"/>
+        </svg>
+        <svg class="svg-decoration svg-bottom-right svg-floating" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="currentColor">
+            <path d="M32 12a20 20 0 1 0 0 40 20 20 0 1 0 0-40zm0 36a16 16 0 1 1 0-32 16 16 0 1 1 0 32z"/>
+        </svg>
+    </header>
+
+    <main class="content">
+        <section class="mechanic">
+            <h2>Core Game Mechanics</h2>
+            <p>Game mechanics are the rules and systems that define how players interact with the game. They are the foundation of gameplay.</p>
+        </section>
+
+        <section class="mechanic-card-container">
+            <div class="mechanic-card">
+                <h3>1. Reward Systems</h3>
+                <p>Players are motivated by rewards, whether it's points, achievements, or unlockable content.</p>
+                <p><strong>More Info:</strong> Rewards create a sense of accomplishment and satisfaction. Examples include achievements, in-game currency, unlockable content, and social rewards like leaderboards. They motivate players and encourage continued play.</p>
+            </div>
+            <div class="mechanic-card">
+                <h3>2. Challenges</h3>
+                <p>Good challenges test players' skills and keep them engaged without causing frustration.</p>
+                <p><strong>More Info:</strong> Challenges can include time-based tasks, skill challenges like aiming or platforming, and logical puzzles. They should adapt to the player's skill level, balancing difficulty to maintain engagement and excitement.</p>
+            </div>
+            <div class="mechanic-card">
+                <h3>3. Player Choices</h3>
+                <p>Games that allow meaningful choices make players feel more in control.</p>
+                <p><strong>More Info:</strong> Player choices influence gameplay and outcomes. Narrative choices affect the story, while gameplay choices let players select strategies or abilities. Such decisions enhance immersion and replayability.</p>
+            </div>
+        </section>
+
+        <section class="article">
+            <h2>In-Depth Articles on Game Mechanics</h2>
+            <p>Game mechanics play a crucial role in crafting memorable player experiences. Here are some essential aspects to explore further:</p>
+            <ul>
+                <li><strong>Progression Systems:</strong> How players advance through levels and improve their skills or characters over time.</li>
+                <li><strong>Feedback Loops:</strong> Positive or negative reinforcement systems that guide player behavior.</li>
+                <li><strong>Multiplayer Mechanics:</strong> Interaction dynamics between players in cooperative or competitive scenarios.</li>
+                <li><strong>Immersion Mechanics:</strong> Tools like storytelling, sound design, and visuals that deepen player engagement.</li>
+            </ul>
+            <p>These elements combine to create a cohesive and enjoyable gaming experience. Dive deeper into these topics to understand how they can elevate your game designs!</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Explore more about game development on our <a href="article2.html">blog</a>.</p>
+        <footer style="margin-top: 30px; font-size: 0.9em; color: gray;">
+            © 2024 /indoor.net All rights reserved.
+        </footer>
+    </footer>
+</body>
+</html>
