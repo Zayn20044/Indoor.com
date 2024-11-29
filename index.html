@@ -24,6 +24,15 @@
             overflow: hidden;
             border-bottom: 2px solid #ddd; /* Adding a border at the bottom */
         }
+        @media (max-width: 768px) {
+    .navbar {
+        display: none; /* Hide the default navbar */
+    }
+    .navbar-mobile {
+        display: block; /* Show mobile menu */
+    }
+}
+
 
         .navbar a {
             float: left;
@@ -56,6 +65,16 @@
             border-radius: 3px;
             transition: background-color 0.3s; /* Adding transition effect for background color */
         }
+        @media (max-width: 600px) {
+    .search-container {
+        flex-direction: column;
+        width: 100%;
+    }
+    .search-box {
+        width: 100%; /* Full-width search box */
+    }
+}
+
 
         .search-box:hover {
             background-color: lightblue; /* Change background color on hover */
@@ -67,6 +86,15 @@
             text-align: center;
             padding: 30px 20px; /* Spacing for readability */
         }
+        @media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 36px;
+    }
+    .hero-section p {
+        font-size: 16px;
+    }
+}
+
 
         .hero-section h1 {
             font-size: 48px;
@@ -104,6 +132,13 @@
             margin: 15px;
             transition: transform 0.3s, box-shadow 0.3s; /* Add transition for both transform and shadow */
         }
+        @media (max-width: 600px) {
+    .game-card {
+        width: 90%; /* Adjust width on mobile */
+        height: auto;
+    }
+}
+
 
         .game-card:hover {
             transform: scale(1.05); /* Slightly enlarge on hover */
