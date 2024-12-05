@@ -57,6 +57,21 @@
         .animate-buttonClick {
             animation: buttonClick 0.2s ease-out forwards;
         }
+        .alert{
+            width: 100%;
+            background-color: rgb(8, 216, 8);
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-align: center;
+            font-size: 18px;
+            font-weight: 900;
+            display: none;
+        }
+        submit:hover .stars{
+            display: block;
+            filter: drop-shadow(0 0 10px
+            #fffdef);
+        }
     </style>
 </head>
 
@@ -64,11 +79,12 @@
     <div class="relative min-h-screen">
         <img alt="A decorative background image with abstract patterns and colors"
             class="absolute inset-0 w-full h-full object-cover opacity-50"
-            src="Contact.jpg" />
+            src="contact.jpg" />
         <div class="relative container mx-auto p-4 flex items-center justify-center min-h-screen">
             <div id="formContainer" class="w-full max-w-lg mx-auto bg-white p-8 rounded-lg shadow-lg animate-slideIn">
                 <h1 class="text-2xl font-bold mb-6 text-center">Contact Us</h1>
                 <form id="contactForm" class="space-y-4">
+                    <div class="alert">Your message sent</div>
                     <div>
                         <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
                         <input type="text" id="name" name="name"
@@ -116,7 +132,12 @@
                 }, 500);
             }, 200);
         });
-    </script>
+        </script>
+        <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+        <script src="why.py"></script>
+        <script src="mail.js"></script>
+        
 </body>
 
 </html>
