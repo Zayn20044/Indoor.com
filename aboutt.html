@@ -21,6 +21,24 @@
             position: relative;
             overflow: hidden;
         }
+        /* Video Trailer Styles */
+.video-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.video-container h2 {
+    font-size: 1.8rem;
+    color: #35e5a6;
+    margin-bottom: 15px;
+}
+
+video {
+    max-width: 50%;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7);
+}
+
 
         .about-section::before {
             content: "";
@@ -229,6 +247,14 @@
             </div>
         </div>
     </div>
+    <div class="video-container">
+        <h2>Watch Our Trailer</h2>
+        <video width="100%" controls>
+            <source src="main trailer.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+</div>
     <div class="cta">
      <a href="premade.html" class="cta-button">Explore Games</a>
     </div>
